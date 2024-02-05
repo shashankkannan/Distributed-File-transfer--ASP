@@ -1,2 +1,8 @@
 # File transfer: ASP
- 
+
+**Distributed File Sharing System - Client.c, Server.c & Mirror.c:**
+This project introduces a distributed file-sharing system comprising three crucial components: **Client.c**, **Server.c**, and **Mirror.c**. The system facilitates seamless file retrieval and information queries through a client-server model. The client interacts with the server or mirror based on availability, providing a fault-tolerant experience.
+
+**Client.c** serves as the user interface, enabling users to initiate commands like requesting file information, retrieving files based on extensions or creation dates, and quitting the client-server connection. The project employs a dynamic allocation approach, ensuring the first four connections are directed to the server, and subsequent connections alternate between the server and mirror instances. The utilization of the `fork` system call enhances parallelism, allowing the system to handle multiple client requests concurrently.
+
+The server (**Server.c**) and mirror (**Mirror.c**) components share a common codebase but operate on different port numbers. They collaboratively manage client requests, with the mirror seamlessly taking over when the server is unavailable. This dual-server architecture, combined with the use of `fork` for parallel processing, optimizes resource utilization and ensures consistent file-sharing performance. Together, these components contribute to a fault-tolerant, distributed file-sharing system capable of adapting to dynamic network conditions.
