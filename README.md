@@ -39,6 +39,6 @@ I designed and implemented a Concurrent Client-Server File Transfer System in C,
     - Executed commands asynchronously and received tar.gz files from the server or mirror.
 
 **Server-Side Implementation:**
-  a. Concurrent Server:
+  a.**Concurrent Server:**
     - Managed multiple client connections concurrently, utilizing fork.
     - Executed commands from clients, performed necessary operations, and sent back tar.gz files.
