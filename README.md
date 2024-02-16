@@ -30,15 +30,17 @@ I designed and implemented a Concurrent Client-Server File Transfer System in C,
   - Implemented error handling for socket creation and file operations, enhancing the system’s reliability.
 
 **Client-Side Implementation:**
-  a.**User-Friendly Interaction:**
+
+  a. **User-Friendly Interaction:**
     - Generated a friendly command prompt using a random string (cRs) to enhance the user experience.
     - Allowed users to input commands such as filenames, date specifications, and file extensions.
 
-  b.**Command Execution:**
+  b. **Command Execution:**
     - Sent commands to the server or mirror based on user input.
     - Executed commands asynchronously and received tar.gz files from the server or mirror.
 
 **Server-Side Implementation:**
-  a.**Concurrent Server:**
+
+  a. **Concurrent Server:**
     - Managed multiple client connections concurrently, utilizing fork.
     - Executed commands from clients, performed necessary operations, and sent back tar.gz files.
